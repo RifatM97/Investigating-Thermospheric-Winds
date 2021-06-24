@@ -66,24 +66,32 @@ title("INMS Path")
 %% Path overlayed onto wind vector field
 % This uses the function in HWM_vectorfield.m file
 
-% Next few functions are dependent on Ap and F10.7 values
-% These are extracted from the f107Ap.lst file downloaded from NASA
-f107Ap = importdata("f107Ap.lst");
+f107Ap = importdata("f107Ap.lst")
 for i = 1:length(f107Ap)
     
     if day(datetime(date.textdata(1,1)), 'dayofyear') == f107Ap(i,2)
-        f107D = f107Ap(i,5);% F10.7 Daily
-        ap = f107Ap(i,4);% Ap value
+        f107D = f107Ap(i,5)
+        ap =% F10.7 Daily
     end
     
 end
 
+ap = 3; % Ap value
 figure;
 [vector_field] = HWM_vectorfield(textfile,ap)
 title("HWM Wind Vector Field with CubeSat Path")
 
 %% Path with wind vector field and density contours
 % This uses the function in densityANDwind.m file
+
+
+for i = 1:length(f107Ap)
+    
+    if day(datetime(date.textdata(1,1)), 'dayofyear') == f107Ap(i,2)
+        f107D = f107Ap(i,5) % F10.7 Daily
+    end
+    
+end
 
 f107A = 74.5; % F10.7 Average
 figure;
