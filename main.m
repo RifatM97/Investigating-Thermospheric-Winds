@@ -94,5 +94,5 @@ subplot('Position', pos2)
 [contour_vector] = densityANDwind(textfile, f107A, f107D, ap)
 title("Wind Field")
 sgtitle('COMPARING FULL RUN COUNTS AND WIND DIRECTION')
-
+ 
 
