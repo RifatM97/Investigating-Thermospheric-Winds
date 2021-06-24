@@ -18,7 +18,7 @@
 % information.
  
 
-% Clear command line
+% Clear command lin
 clc;
 % Change directory to folder in which txt files are stored
 cd ("C:\Users\rifat\OneDrive - University College London\Rifat's PC\Internship 2021\Rifat's project\CorrectINMSdata"); 
