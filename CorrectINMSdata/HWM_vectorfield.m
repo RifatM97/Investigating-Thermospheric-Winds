@@ -41,7 +41,7 @@ function [vector_field] = HWM_vectorfield(textfile,ap)
     % plotting routine
     % Matrices used to create quiver plots
     
-    %load coastlines.mat;
+    load coastlines.mat;
     [X,Y]= meshgrid(-179:180, -89:90);
     vector_field = quiver(X,Y,w_mat6,w_mat5,10,"g","LineWidth",0.5)
     hold on;
